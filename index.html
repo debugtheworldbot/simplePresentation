@@ -1,50 +1,166 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-		<title>reveal.js</title>
+    <title>SIMPLE PRESENTATION</title>
 
-		<link rel="stylesheet" href="css/reset.css">
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+    <meta
+      name="description"
+      content="A framework for easily creating beautiful presentations using HTML"
+    />
+    <meta name="author" content="Hakim El Hattab" />
 
-		<!-- Theme used for syntax highlighting of code -->
-		<link rel="stylesheet" href="lib/css/monokai.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
 
-		<script src="js/reveal.js"></script>
 
-		<script>
-			// More info about config & dependencies:
-			// - https://github.com/hakimel/reveal.js#configuration
-			// - https://github.com/hakimel/reveal.js#dependencies
-			Reveal.initialize({
-				hash: true,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/highlight/highlight.js' },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-		</script>
-	</body>
+
+
+
+
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/reveal.css" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/monokai.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- Printing and PDF exports -->
+  </head>
+
+  <body>
+    <div class="control">
+      <img src="img/settings.png" class="settings" />
+    </div>
+    <div class="menu">
+      <img src="img/close.png" class="close" />
+      <div class="detail">
+        <div class="tab"><img src="img/edit.png" class="icons" /> 内容编辑</div>
+        <div class="tab">
+          <img src="img/theme.png" class="icons" />主题与特效
+        </div>
+
+
+
+        <div class="tab">
+          <img src="img/presentation.png" class="icons" />演讲者模式
+        </div>
+
+
+
+        <div class="content active">
+          <div class="header">编辑</div>
+          <div class="body editor">
+            <textarea class="textarea"></textarea>
+            <div class="uploader">
+              <label for="img-uploader">点击上传图片</label>
+              <input type="file" id="img-uploader" accept="image/*" />
+            </div>
+            <div>
+              <button class="saveBtn">保存</button>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="header">主题</div>
+          <div class="body theme">
+            <div class="themes">
+              <figure data-theme="beige">
+                <img src="img/beige.png" />
+                <figcaption>beige</figcaption>
+              </figure>
+              <figure data-theme="black">
+                <img src="img/black.png" />
+                <figcaption>black</figcaption>
+              </figure>
+              <figure data-theme="blood">
+                <img src="img/blood.png" />
+                <figcaption>blood</figcaption>
+              </figure>
+              <figure data-theme="league">
+                <img src="img/league.png" />
+                <figcaption>league</figcaption>
+              </figure>
+              <figure data-theme="moon">
+                <img src="img/moon.png" />
+                <figcaption>moon</figcaption>
+              </figure>
+              <figure data-theme="night">
+                <img src="img/night.png" />
+                <figcaption>night</figcaption>
+              </figure>
+              <figure data-theme="serif">
+                <img src="img/serif.png" />
+                <figcaption>serif</figcaption>
+              </figure>
+              <figure data-theme="simple">
+                <img src="img/simple.png" />
+                <figcaption>simple</figcaption>
+              </figure>
+              <figure data-theme="sky">
+                <img src="img/sky.png" />
+                <figcaption>sky</figcaption>
+              </figure>
+              <figure data-theme="solarized">
+                <img src="img/solarized.png" />
+                <figcaption>solarized</figcaption>
+              </figure>
+              <figure data-theme="white">
+                <img src="img/white.png" />
+                <figcaption>white</figcaption>
+              </figure>
+            </div>
+            <span class="span1">转场特效</span>
+            <select class="transition">
+              <option value="slide">滑动</option>
+              <option value="fade">淡化</option>
+              <option value="convex">凸出</option>
+              <option value="concave">凹陷</option>
+              <option value="zoom">缩放</option>
+              <option value="none">无</option>
+            </select>
+
+            <span class="span1">对齐</span>
+            <select class="align">
+              <option value="center">居中</option>
+              <option value="left-top">左上</option>
+            </select>
+            <span class="span1">进度条</span>
+            <select class="progress">
+              <option value="display">显示</option>
+              <option value="hide">隐藏</option>
+            </select>
+            <span>控制按钮</span>
+            <select class="controls">
+              <option value="display">显示</option>
+              <option value="hide">隐藏</option>
+            </select>
+          </div>
+        </div>
+
+
+        <div class="content">
+          <div class="header">演讲者模式</div>
+          <div class="body speaker">
+            <p>按下  <strong>S</strong>  以开启演讲者模式</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="slides"></div>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.2.0/dist/av-min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
